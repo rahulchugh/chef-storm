@@ -1,6 +1,6 @@
-default["storm"]["version"] = "0.8.2"
-default["storm"]["download_url"] = "https://dl.dropbox.com/u/133901206/storm-0.8.2.zip"
-default["storm"]["checksum"] = "8761aea0b54e5bab4a68b259bbe6b5b2f8226204488b5559eba57a0c458b2bbc"
+default["storm"]["version"] = "0.9.0-rc3"
+default["storm"]["download_url"] = "https://dl.dropboxusercontent.com/s/t8m516l2kadt7c6/storm-0.9.0-rc3.zip"
+default["storm"]["checksum"] = "5a2b12bd3e366bce859afd653f7c3c56b4c1440ad3c5c80052a3988e88b8ca84"
 
 default["storm"]["user"] = "storm"
 default["storm"]["group"] = "storm"
