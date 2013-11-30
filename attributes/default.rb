@@ -13,6 +13,15 @@ default['storm']['local_dir'] = "/mnt/storm"
 default['storm']['cluster_mode'] = "distributed"
 default['storm']['cluster_name'] = "default"
 
+# Messaging attributes
+default['storm']['messaging']['transport'] = "backtype.storm.messaging.netty.Context"
+default['storm']['messaging']['netty']['server_worker_threads'] = 1
+default['storm']['messaging']['netty']['client_worker_threads'] = 1
+default['storm']['messaging']['netty']['buffer_size'] = 5242880
+default['storm']['messaging']['netty']['max_retries'] = 100
+default['storm']['messaging']['netty']['max_wait_ms'] = 1000
+default['storm']['messaging']['netty']['min_wait_ms'] = 100
+
 # ZooKeeper attributes
 default['storm']['zookeeper']['port'] = 2181
 default['storm']['zookeeper']['root'] = "/storm"
