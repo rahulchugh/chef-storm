@@ -1,4 +1,3 @@
-# vim: ft=ruby
 site :opscode
 
 metadata
