@@ -8,12 +8,12 @@ default["storm"]["home_dir"] = "/usr/local/storm"
 default["storm"]["conf_dir"] = "/etc/storm"
 default["storm"]["log_dir"] = "/var/log/storm"
 
-# general storm attributes
+# General Storm attributes
 default['storm']['local_dir'] = "/mnt/storm"
 default['storm']['cluster_mode'] = "distributed"
 default['storm']['cluster_name'] = "default"
 
-# zookeeper attributes
+# ZooKeeper attributes
 default['storm']['zookeeper']['port'] = 2181
 default['storm']['zookeeper']['root'] = "/storm"
 default['storm']['zookeeper']['session_timeout'] = 20000
@@ -21,7 +21,7 @@ default['storm']['zookeeper']['retry_times'] = 5
 default['storm']['zookeeper']['retry_interval'] = 1000
 default['storm']['zookeeper']['cluster_name'] = "default"
 
-# supervisor attributes
+# Supervisor attributes
 default['storm']['supervisor']['workers'] = 4
 default['storm']['supervisor']['childopts'] = "-Xmx1024m"
 default['storm']['supervisor']['worker_start_timeout'] = 120
@@ -30,13 +30,13 @@ default['storm']['supervisor']['monitor_frequecy_secs'] = 3
 default['storm']['supervisor']['heartbeat_frequency_secs'] = 5
 default['storm']['supervisor']['enable'] = true
 
-# worker attributes
+# Worker attributes
 default['storm']['worker']['childopts'] = "-Xmx1280m -XX:+UseConcMarkSweepGC -Dcom.sun.management.jmxremote"
 default['storm']['worker']['heartbeat_frequency_secs'] = 1
 default['storm']['task']['heartbeat_frequency_secs'] = 3
 default['storm']['task']['refresh_poll_secs'] = 10
 
-# nimbus attributes
+# Nimbus attributes
 default['storm']['nimbus']['host'] = ""
 default['storm']['nimbus']['thrift_port'] = 6627
 default['storm']['nimbus']['childopts'] = "-Xmx1024m"
@@ -49,20 +49,20 @@ default['storm']['nimbus']['task_launch_secs'] = 120
 default['storm']['nimbus']['reassign'] = true
 default['storm']['nimbus']['file_copy_expiration_secs'] = 600
 
-# ui attributes
+# UI attributes
 default['storm']['ui']['port'] = 8080
 default['storm']['ui']['childopts'] = "-Xmx768m"
 
-# drpc attributes
+# DRPC attributes
 default['storm']['drpc']['port'] = 3772
 default['storm']['drpc']['invocations_port'] = 3773
 default['storm']['drpc']['request_timeout_secs'] = 600
 
-# transactional attributes
+# Transactional attributes
 default['storm']['transactional']['zookeeper']['root'] = "/storm-transactional"
 default['storm']['transactional']['zookeeper']['port'] = 2181
 
-# topology attributes
+# Topology attributes
 default['storm']['topology']['debug'] = false
 default['storm']['topology']['optimize'] = true
 default['storm']['topology']['workers'] = 1
