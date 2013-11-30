@@ -1,5 +1,5 @@
-#! /bin/sh
-
+#!/bin/sh
 cd <%= node["storm"]["home_dir"] %>
-exec chpst -u <%= node["storm"]["user"] %>:<%= node["storm"]["group"] %> \
-	bin/storm <%= @options[:daemon] %>
+exec chpst \
+-u <%= node["storm"]["user"] %>:<%= node["storm"]["group"] %> \
+bin/storm <%= @options[:daemon] %>
