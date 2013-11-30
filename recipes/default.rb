@@ -3,11 +3,10 @@
 # Recipe:: default
 #
 # Copyright (C) 2013 Fewbytes
-# 
+#
 
 package "zip"
 include_recipe "java"
-include_recipe "zeromq"
 
 group node["storm"]["group"]
 

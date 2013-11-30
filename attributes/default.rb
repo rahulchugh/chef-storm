@@ -10,7 +10,6 @@ default["storm"]["log_dir"] = "/var/log/storm"
 
 # general storm attributes
 default['storm']['local_dir'] = "/mnt/storm"
-default['storm']['local_mode_zmq'] = "false"
 default['storm']['cluster_mode'] = "distributed"
 default['storm']['cluster_name'] = "default"
 
@@ -36,8 +35,6 @@ default['storm']['worker']['childopts'] = "-Xmx1280m -XX:+UseConcMarkSweepGC -Dc
 default['storm']['worker']['heartbeat_frequency_secs'] = 1
 default['storm']['task']['heartbeat_frequency_secs'] = 3
 default['storm']['task']['refresh_poll_secs'] = 10
-default['storm']['zmq']['threads'] = 1
-default['storm']['zmq']['longer_millis'] = 5000
 
 # nimbus attributes
 default['storm']['nimbus']['host'] = ""

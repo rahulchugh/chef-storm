@@ -1,8 +1,6 @@
 ### base
 storm.local.dir: "<%= node[:storm][:local_dir] %>"
-storm.local.mode.zmq: <%= node[:storm][:local_mode_zmq] %>
 storm.cluster.mode: "<%= node[:storm][:cluster_mode] %>"
-
 
 ### zookeeper.*
 storm.zookeeper.servers:
@@ -14,7 +12,6 @@ storm.zookeeper.root: "<%= node[:storm][:zookeeper][:root] %>"
 storm.zookeeper.session.timeout: <%= node[:storm][:zookeeper][:session_timeout] %>
 storm.zookeeper.retry.times: <%= node[:storm][:zookeeper][:retry_times] %>
 storm.zookeeper.retry.interval: <%= node[:storm][:zookeeper][:retry_interval] %>
-
 
 ### supervisor.* configs are for node supervisors
 supervisor.slots.ports:
@@ -28,17 +25,11 @@ supervisor.monitor.frequency.secs: <%= node[:storm][:supervisor][:monitor_freque
 supervisor.heartbeat.frequency.secs: <%= node[:storm][:supervisor][:heartbeat_frequency_secs] %>
 supervisor.enable: <%= node[:storm][:supervisor][:enable] %>
 
-
-
 ### worker.* configs are for task workers
 worker.childopts: "<%= node[:storm][:worker][:childopts] %>"
 worker.heartbeat.frequency.secs: <%= node[:storm][:worker][:heartbeat_frequency_secs] %>
 task.heartbeat.frequency.secs: <%= node[:storm][:task][:heartbeat_frequency_secs] %>
 task.refresh.poll.secs: <%= node[:storm][:task][:refresh_poll_secs] %>
-zmq.threads: <%= node[:storm][:zmq][:threads] %>
-zmq.linger.millis: <%= node[:storm][:zmq][:longer_millis] %>
-
-
 
 ### nimbus.* configs are for the master
 nimbus.host: "<%= @nimbus[:ipaddress] %>"
@@ -53,20 +44,14 @@ nimbus.task.launch.secs: <%= node[:storm][:nimbus][:task_launch_secs] %>
 nimbus.reassign: <%= node[:storm][:nimbus][:reassign] %>
 nimbus.file.copy.expiration.secs: <%= node[:storm][:nimbus][:file_copy_expiration_secs] %>
 
-
-
 ### ui.* configs are for the master
 ui.port: <%= node[:storm][:ui][:port] %>
 ui.childopts: "<%= node[:storm][:ui][:childopts] %>"
-
-
 
 ### drpc.* configs
 drpc.port: <%= node[:storm][:drpc][:port] %>
 drpc.invocations.port: <%= node[:storm][:drpc][:invocations_port] %>
 drpc.request.timeout.secs: <%= node[:storm][:drpc][:request_timeout_secs] %>
-
-
 
 ### transactional.* configs
 transactional.zookeeper.servers:
@@ -75,8 +60,6 @@ transactional.zookeeper.servers:
 <% end -%>
 transactional.zookeeper.root: "<%= node[:storm][:transactional][:zookeeper][:root] %>"
 transactional.zookeeper.port: <%= node[:storm][:transactional][:zookeeper][:port] %>
-
-
 
 ### topology.* configs are for specific executing storms
 topology.debug: <%= node[:storm][:topology][:debug] %>
@@ -93,5 +76,3 @@ topology.state.synchronization.timeout.secs: <%= node[:storm][:topology][:state_
 topology.stats.sample.rate: <%= node[:storm][:topology][:stats_sample_rate] %>
 topology.fall.back.on.java.serialization: <%= node[:storm][:topology][:fall_back_on_java_serialization] %>
 topology.worker.childopts: <%= node[:storm][:topology][:worker_childopts] %>
-
-
